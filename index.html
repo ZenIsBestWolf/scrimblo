@@ -87,7 +87,7 @@
     <title>Play SCRIMBLO!</title>
 </head>
 <body>
-    <div id="container" onclick="copyPuzzle()">
+    <div id="container">
         <header style="text-align: center">
             <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;padding-top: 30px;padding-bottom: 30px;padding-left: 30px;margin-top: 0px;margin-bottom: 0px;font-size: 69pt;margin-bottom: 10%;">SCRIMBLO</h1>
         </header>
@@ -114,6 +114,7 @@
       }
 
       changeMessage();
+
       function copyPuzzle() {
         var puzzle_number = "9";
         var line1 = ["🟨🟥➡️🟥", "⬇️🟨⬆️🟥", "🟥🟨⬅️🟥"];
@@ -126,6 +127,9 @@
         var puzzle = `Scrimblo\nPuzzle #${puzzle_number}\n${line1[option1]}\n${line2[option2]}\n${line3[option3]}\n${line4}\n`
         navigator.clipboard.writeText(puzzle);
       }
+
+      var title_div = document.getElementById("container");
+      title_div.addEventListener('click', copyPuzzle);
     </script>
 </body>
 </html>
