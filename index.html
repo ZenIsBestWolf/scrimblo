@@ -1,90 +1,121 @@
 <!DOCTYPE html>
-
-<style>
-header {
-    align-items: left;
-    margin-top: 0px;
-    max-width: 100%;
-    padding: 0px;
-    margin: 0; 
-    background-color: rgba(68,207,108);
-    color: rgb(241, 255, 231);
-    text-align: center;
-    line-height: 1;
-    border-radius: 20px;
-}
-#container {
-        align-items: center;
-        vertical-align: middle;
-        max-width: 100%;
-        min-height: 100%;
-        /*opacity: 90%;*/
-        padding-top: 0px;
-        border: 0px solid rgba(28, 24, 22, 0.9);
-        margin: 0 auto; 
-        background-color: rgba(8,207,10);
-        color: rgb(191, 191, 191);
-        align-items: center;
+<!-- NO PEEKING!!! -zen -->
+<html lang="en">
+<head>
+    <style>
+      header {
+          align-items: left;
+          margin-top: 0px;
+          max-width: 100%;
+          padding: 0px;
+          margin: 0; 
+          background-color: rgba(68,207,108);
+          color: rgb(241, 255, 231);
+          text-align: center;
+          line-height: 1;
+          border-radius: 20px;
+      }
+      #container {
+              align-items: center;
+              vertical-align: middle;
+              max-width: 100%;
+              min-height: 100%;
+              /*opacity: 90%;*/
+              padding-top: 0px;
+              border: 0px solid rgba(28, 24, 22, 0.9);
+              margin: 0 auto; 
+              background-color: rgba(8,207,10);
+              color: rgb(191, 191, 191);
+              align-items: center;
+              position: relative;
+              border-radius: 20px;
+              /* text-shadow: -2px -2px 2px black; */
+              /* box-shadow: 2px 2px 2px black; */
+      }
+      #container2 {
+              /* align-items: center; */
+              /* vertical-align: middle; */
+              /* text-shadow: -2px -2px 2px black; */
+              /* box-shadow: 2px 2px 2px black; */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+      }
+      #container3 {
+        width: 100%;
+      }
+      body{
+          background-color: rgb(241, 255, 231);
+      }
+      /* HTML: <div class="loader"><\/div> */
+      /* HTML: <div class="loader"><\/div> */
+      .loader {
+        width: 40px;
+        height: 40px;
+        margin: auto;
         position: relative;
-        border-radius: 20px;
-        /* text-shadow: -2px -2px 2px black; */
-        /* box-shadow: 2px 2px 2px black; */
-}
-#container2 {
-        /* align-items: center; */
-        /* vertical-align: middle; */
-        /* text-shadow: -2px -2px 2px black; */
-        /* box-shadow: 2px 2px 2px black; */
-        display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 0%;
-  height: 0%;
-}
-body{
-    background-color: rgb(241, 255, 231);
-}
-/* HTML: <div class="loader"></div> */
-/* HTML: <div class="loader"></div> */
-.loader {
-  width: 40px;
-  height: 40px;
-  position: relative;
-  --c:no-repeat linear-gradient(#32A287 0 0);
-  background:
-    var(--c) center/100% 10px,
-    var(--c) center/10px 100%;
-}
-.loader:before {
-  content:'';
-  position: absolute;
-  inset: 0;
-  background:
-    var(--c) 0    0,
-    var(--c) 100% 0,
-    var(--c) 0    100%,
-    var(--c) 100% 100%;
-  background-size: 15.5px 15.5px;
-  animation: l16 1.5s infinite cubic-bezier(0.3,1,0,1);
-}
-@keyframes l16 {
-   33%  {inset:-10px;transform: rotate(0deg)}
-   66%  {inset:-10px;transform: rotate(90deg)}
-   100% {inset:0    ;transform: rotate(90deg)}
-}
-</style>
-<html>
+        --c:no-repeat linear-gradient(#32A287 0 0);
+        background:
+          var(--c) center/100% 10px,
+          var(--c) center/10px 100%;
+      }
+      .loader:before {
+        content:'';
+        position: absolute;
+        inset: 0;
+        background:
+          var(--c) 0    0,
+          var(--c) 100% 0,
+          var(--c) 0    100%,
+          var(--c) 100% 100%;
+        background-size: 15.5px 15.5px;
+        animation: l16 1.5s infinite cubic-bezier(0.3,1,0,1);
+      }
+      @keyframes l16 {
+         33%  {inset:-10px;transform: rotate(0deg)}
+         66%  {inset:-10px;transform: rotate(90deg)}
+         100% {inset:0    ;transform: rotate(90deg)}
+      }
+    </style>
+    <title>Play SCRIMBLO!</title>
+</head>
+<body>
     <div id="container">
-<header style="text-align: center">
-    <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;padding-top: 30px;padding-bottom: 30px;padding-left: 30px;margin-top: 0px;margin-bottom: 0px;font-size: 69pt;margin-bottom: 10%;" >
-        SCRIMBLO
-    </h1>
-    
-</header>
-</div>
-<div id="container2">
-    <div class="loader"></div> 
-</div>
+        <header style="text-align: center">
+            <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;padding-top: 30px;padding-bottom: 30px;padding-left: 30px;margin-top: 0px;margin-bottom: 0px;font-size: 69pt;margin-bottom: 10%;">SCRIMBLO</h1>
+        </header>
+    </div>
+    <div id="container2">
+        <div class="loader"></div>
+        <br>
+        <br>
+        <div id="container3">
+          <span id="string" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Loading...</span>
+        </div>
+    </div>
+
+    <script>
+      var strings = ["Loading...", "Almost there...", "Not working? Try a different browser.", "Not working? Try a different device.", "Not working? Try a different browser." ,"Just a little longer...", "SCRIMBLO is just around the corner..."];
+      var span = document.getElementById("string");
+
+      function changeMessage() { // recursively call to change the message, will be interrupted when the page loads (changes)
+        setTimeout(function() {
+          option = Math.floor(Math.random() * strings.length);
+          console.log(option)
+          console.log(strings[option])
+          span.textContent = strings[option];
+          changeMessage();
+        }, 5000)
+      }
+
+      changeMessage();
+    </script>
+</body>
 </html>
