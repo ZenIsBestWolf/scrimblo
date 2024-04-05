@@ -35,4 +35,6 @@ function copyPuzzle() {
     navigator.clipboard.writeText(puzzle);
 }
 var title_div = document.getElementById("header");
+var title_str = document.getElementById("scrimblo");
 title_div.addEventListener('click', copyPuzzle);
+title_str.addEventListener('click', copyPuzzle);
