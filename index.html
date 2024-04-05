@@ -1,157 +1,29 @@
 <!DOCTYPE html>
-<!-- NO PEEKING!!! -zen -->
+<!-- NO PEEKING!!! -Zen -->
+<!-- Curious? https://github.com/ZenIsBestWolf/scrimblo -->
 <html lang="en">
-<head>
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Play Scrimblo!" />
-    <meta name="twitter:description" content="The only scramble-push game on the internet!" />
-    <meta name="twitter:image" content="https://playscrimblo.net/scrimblo.png" />
-    <style>
-      header {
-          align-items: left;
-          margin-top: 0px;
-          max-width: 100%;
-          padding: 0px;
-          margin: 0; 
-          background-color: rgba(68,207,108);
-          color: rgb(241, 255, 231);
-          text-align: center;
-          line-height: 1;
-          border-radius: 20px;
-      }
-      #container {
-              align-items: center;
-              vertical-align: middle;
-              max-width: 100%;
-              min-height: 100%;
-              /*opacity: 90%;*/
-              padding-top: 0px;
-              border: 0px solid rgba(28, 24, 22, 0.9);
-              margin: 0 auto; 
-              background-color: rgba(8,207,10);
-              color: rgb(191, 191, 191);
-              align-items: center;
-              position: relative;
-              border-radius: 20px;
-              /* text-shadow: -2px -2px 2px black; */
-              /* box-shadow: 2px 2px 2px black; */
-      }
-      #container2 {
-              /* align-items: center; */
-              /* vertical-align: middle; */
-              /* text-shadow: -2px -2px 2px black; */
-              /* box-shadow: 2px 2px 2px black; */
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: auto;
-        margin-bottom: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translateX(-50%) translateY(-50%);
-        -webkit-transform: translate(-50%,-50%);
-        transform: translate(-50%,-50%);
-      }
-      #container3 {
-        width: 100%;
-      }
-      body{
-          background-color: rgb(241, 255, 231);
-      }
-      /* HTML: <div class="loader"><\/div> */
-      /* HTML: <div class="loader"><\/div> */
-      .loader {
-        width: 40px;
-        height: 40px;
-        margin: auto;
-        position: relative;
-        --c:no-repeat linear-gradient(#32A287 0 0);
-        background:
-          var(--c) center/100% 10px,
-          var(--c) center/10px 100%;
-      }
-      .loader:before {
-        content:'';
-        position: absolute;
-        inset: 0;
-        background:
-          var(--c) 0    0,
-          var(--c) 100% 0,
-          var(--c) 0    100%,
-          var(--c) 100% 100%;
-        background-size: 15.5px 15.5px;
-        animation: l16 1.5s infinite cubic-bezier(0.3,1,0,1);
-      }
-      @keyframes l16 {
-         33%  {inset:-10px;transform: rotate(0deg)}
-         66%  {inset:-10px;transform: rotate(90deg)}
-         100% {inset:0    ;transform: rotate(90deg)}
-      }
-    </style>
-    <title>Play SCRIMBLO!</title>
-</head>
-<body>
-    <div id="container">
-        <header style="text-align: center">
-            <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;padding-top: 30px;padding-bottom: 30px;padding-left: 30px;margin-top: 0px;margin-bottom: 0px;font-size: 69pt;margin-bottom: 10%;">SCRIMBLO</h1>
-        </header>
-    </div>
-    <div id="container2">
-        <div class="loader"></div>
-        <br>
-        <br>
-        <div id="container3">
-          <span id="string" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Loading...</span>
+    <head>
+        <title>Play SCRIMBLO!</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Play Scrimblo!" />
+        <meta name="twitter:description" content="The only scramble-push game on the internet!" />
+        <meta name="twitter:image" content="https://playscrimblo.net/scrimblo.png" />
+        <link rel="stylesheet" type="text/css" href="index.css" />
+    </head>
+    <body>
+        <div id="header">
+            <p id="scrimblo">SCRIMBLO</p>
         </div>
-    </div>
-
-    <script>
-      var strings = ["Loading...", "Almost there...", "Not working? Try a different browser.", "Not working? Try a different device.", "Not working? Try a different browser." ,"Just a little longer...", "SCRIMBLO is just around the corner..."];
-      var span = document.getElementById("string");
-
-      function changeMessage() { // recursively call to change the message, will be interrupted when the page loads (changes)
-        setTimeout(function() {
-          option = Math.floor(Math.random() * strings.length);
-          span.textContent = strings[option];
-          changeMessage();
-        }, 5000)
-      }
-
-      changeMessage();
-
-      const ONE_DAY_MS = 1000 * 60 * 60 * 24;
-
-      let today = new Date();
-      let day_one = new Date(2024, 2, 21);
-
-      function copyPuzzle() {
-        var puzzle_number = -(Math.round((day_one.getTime() - today.getTime()) / ONE_DAY_MS)).toFixed(0);
-        var line1 = ["🟥","🟥","⬇️","🟨","⬆️","🟨", "🟥","⬅️","🟥","➡️","🟨","🟥","🟥","⬇️","🟨","⬆️","🟨", "🟥","⬅️","🟥","➡️","🟨"];
-        var line2 = ["🟥","⬇️","🟨","🟩","🟨","⬆️", "⬅️","🟨","🟨","🟨","🟥","🟨","🟨","🟨","🟨","🟨","⬆️", "⬅️","🟨","🟩","🟨","➡️"]
-        var line3 = ["🟨","🟨","🟨","⬇️","🟨","🟩", "🟨","🟩","⬅️","🟩","⬆️","🟩","🟨","🟩","🟩","🟩","🟥", "🟨","🟩","🟩","🟨","🟩"]
-        var line4 = "🟩🟩🟩🟩";
-        
-        var option1 = Math.floor(Math.random() * line1.length);
-        var option2 = Math.floor(Math.random() * line2.length);
-        var option3 = Math.floor(Math.random() * line3.length);
-        var option4 = Math.floor(Math.random() * line3.length);
-
-        var option1b = Math.floor(Math.random() * line1.length);
-        var option2b = Math.floor(Math.random() * line2.length);
-        var option3b = Math.floor(Math.random() * line3.length);
-        var option4b = Math.floor(Math.random() * line3.length);
-
-        var option1c = Math.floor(Math.random() * line1.length);
-        var option2c = Math.floor(Math.random() * line2.length);
-        var option3c = Math.floor(Math.random() * line3.length);
-        var option4c = Math.floor(Math.random() * line3.length);
-
-        var puzzle = `Scrimblo\nPuzzle #${puzzle_number}\n${line1[option1]}${line1[option2]}${line1[option3]}${line1[option4]}\n${line2[option1b]}${line2[option2b]}${line2[option3b]}${line2[option4b]}\n${line3[option1c]}${line3[option2c]}${line3[option3c]}${line3[option4c]}\n${line4}\n`
-        navigator.clipboard.writeText(puzzle);
-      }
-
-      var title_div = document.getElementById("container");
-      title_div.addEventListener('click', copyPuzzle);
-    </script>
-</body>
+        <br>
+        <div id="content">
+            <div id="loader"></div>
+            <br>
+            <br>
+            <div id="message">
+                <span id="string">Loading...</span>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
 </html>
